@@ -8,11 +8,6 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  icons: {
-    icon: '@/../public/assets/light_favicon.ico',
-  },
-};
 
 export default function Contact() {
   return (

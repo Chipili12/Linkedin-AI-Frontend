@@ -14,7 +14,7 @@ export default function Navbar() {
     setMenuOpen(!isOpen);
   };
 
-  const MenuItem = ({ href, pathname, children }) => (
+  const MenuItem = ({ href, children }) => (
     <Link
         className={`link ${
           pathname === href ? "text-red-300" : "text-gray-200"
@@ -37,18 +37,18 @@ export default function Navbar() {
   ];
 
   const LinkItem = ({ href, label }) => (
-    <Link className={`link ${pathname === href ? "text-red-300" : "text-gray-200"}`} href={href}>
+    <Link className={`${pathname === href ? "text-red-300" : "text-gray-200"}`} href={href}>
       <p>{label}</p>
     </Link>
   );
 
   return (
-    <header className=" border-b border-slate-500 pb-3 mt-6 flex items-center px-3 justify-between absolute top-0 z-10 right-0 left-0 text-lg">
+    <header className="border-b border-slate-500 pb-3 mt-6 flex items-center px-3 justify-between absolute top-0 z-10 right-0 left-0 text-lg">
       <Link href="/" className="">
         <Image src={logo} alt="logo" className="ms-10" width={200}></Image>
       </Link>
 
-      <nav className="flex gap-10 items-center pe-10">
+      <nav className="pe-6">
         <div className="gap-10 hidden lg:flex">
         {links.map((link) => (
       <LinkItem key={link.href} href={link.href} label={link.label} />
@@ -73,10 +73,10 @@ export default function Navbar() {
           className="absolute mt-1 rounded shadow-lg w-40 right-0 transform text-gray-200 text-right"
           onClick={toggleMenu}
         >
-          <MenuItem href="/" pathname={pathname}>INICIO</MenuItem>
-          <MenuItem href="/features" pathname={pathname}>CARACTERÍSTICAS</MenuItem>
-          <MenuItem href="/about" pathname={pathname}>NOSOTROS</MenuItem>
-          <MenuItem href="/contact" pathname={pathname}>CONTACTO</MenuItem>
+          <MenuItem href="/" >INICIO</MenuItem>
+          <MenuItem href="/features" >CARACTERÍSTICAS</MenuItem>
+          <MenuItem href="/about" >NOSOTROS</MenuItem>
+          <MenuItem href="/contact" >CONTACTO</MenuItem>
         </ul>
            )}
         </div>
