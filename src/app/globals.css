@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.landingpage {
     background: rgb(37, 150, 190);
     background: linear-gradient(
-      140deg,
-      rgba(37, 150, 190, 1) 10%,
+      150deg,
+      rgba(37, 150, 190, 1) 15%,
       rgba(28,32,64,1) 35%,
       rgba(34, 15, 45, 1) 65%,
       rgba(205, 20, 60, 1) 100%
     );
-    
+    background-attachment: fixed;
 }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 2px; background-color: #666; border-radius: 3px;}

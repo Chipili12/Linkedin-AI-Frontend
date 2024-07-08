@@ -14,6 +14,34 @@ export default function Navbar() {
     setMenuOpen(!isOpen);
   };
 
+  const MenuItem = ({ href, pathname, children }) => (
+    <Link
+        className={`link ${
+          pathname === href ? "text-red-300" : "text-gray-200"
+        }`}
+        href={href}
+      >
+    <li className="py-2 px-4 bg-white bg-opacity-0 hover:bg-opacity-10">
+      
+        <p>{children}</p>
+      
+    </li>
+    </Link>
+  );
+
+  const links = [
+    { href: "/", label: "INICIO" },
+    { href: "/features", label: "CARACTERÍSTICAS" },
+    { href: "/about", label: "NOSOTROS" },
+    { href: "/contact", label: "CONTACTO" },
+  ];
+
+  const LinkItem = ({ href, label }) => (
+    <Link className={`link ${pathname === href ? "text-red-300" : "text-gray-200"}`} href={href}>
+      <p>{label}</p>
+    </Link>
+  );
+
   return (
     <header className=" border-b border-slate-500 pb-3 mt-6 flex items-center px-3 justify-between absolute top-0 z-10 right-0 left-0 text-lg">
       <Link href="/" className="">
@@ -21,43 +49,13 @@ export default function Navbar() {
       </Link>
 
       <nav className="flex gap-10 items-center pe-10">
-        <Link
-          className={`link ${
-            pathname === "/" ? "text-red-300" : "text-gray-200"
-          }`}
-          href="/"
-        >
-          <p>HOME</p>
-        </Link>
+        <div className="gap-10 hidden lg:flex">
+        {links.map((link) => (
+      <LinkItem key={link.href} href={link.href} label={link.label} />
+    ))}
 
-        <Link
-          className={`link ${
-            pathname === "/features" ? "text-red-300" : "text-gray-200"
-          }`}
-          href="/features"
-        >
-          <p>FEATURES</p>
-        </Link>
-
-        <Link
-          className={`link ${
-            pathname === "/contact" ? "text-red-300" : "text-gray-200"
-          }`}
-          href="/contact"
-        >
-          <p>ABOUT US</p>
-        </Link>
-
-        <Link
-          className={`link ${
-            pathname === "/contact" ? "text-red-300" : "text-gray-200"
-          }`}
-          href="/contact"
-        >
-          <p>CONTACT US</p>
-        </Link>
-
-        <div className="relative">
+        </div>
+        <div className="relative block lg:hidden">
           <button
             onClick={toggleMenu}
             className="bg-white bg-opacity-0 hover:bg-opacity-10 text-white rounded"
@@ -70,19 +68,17 @@ export default function Navbar() {
             ></Image>
           </button>
 
-          {isOpen && (
-            <ul className="absolute mt-1 rounded shadow-lg w-40 right-0 left-0 transform -translate-x-1/2 text-gray-200 text-right">
-              <li className="py-2 px-4 bg-white bg-opacity-0 hover:bg-opacity-10 cursor-pointer">
-                Option 1
-              </li>
-              <li className="py-2 px-4 bg-white bg-opacity-0 hover:bg-opacity-10 cursor-pointer">
-                Option 2
-              </li>
-              <li className="py-2 px-4 bg-white bg-opacity-0 hover:bg-opacity-10 cursor-pointer">
-                Contactanos
-              </li>
-            </ul>
-          )}
+           {isOpen && (
+        <ul
+          className="absolute mt-1 rounded shadow-lg w-40 right-0 transform text-gray-200 text-right"
+          onClick={toggleMenu}
+        >
+          <MenuItem href="/" pathname={pathname}>INICIO</MenuItem>
+          <MenuItem href="/features" pathname={pathname}>CARACTERÍSTICAS</MenuItem>
+          <MenuItem href="/about" pathname={pathname}>NOSOTROS</MenuItem>
+          <MenuItem href="/contact" pathname={pathname}>CONTACTO</MenuItem>
+        </ul>
+           )}
         </div>
       </nav>
     </header>
