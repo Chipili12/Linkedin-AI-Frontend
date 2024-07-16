@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/navbar";
+import { Poppins } from "next/font/google";
+
 
 const poppins = Poppins({
-  weight: ["100","400", "700"],
+  weight: ["100", "400", "700"],
   subsets: ["latin"],
 });
+
+
 export const metadata: Metadata = {
-  title: "LinkedAI",
+  title: {
+    default: 'LinkedAI',
+  },
   description: "New Generation AI powered LinkedIn reviews and tips",
   icons: {
     icon: [
@@ -31,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} landingpage`}>
+      <body className={`${poppins.className} landingpage `}>
         <Navbar />
         {children}
       </body>

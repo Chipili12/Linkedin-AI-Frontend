@@ -4,11 +4,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="lg:flex max-h-screen items-center p-5 lg:justify-center landingpage ">
-      <div className="h-screen items-center relative gap-32 flex justify-center">
-      <Image src={ai_cellphone} height={250} width={400} alt="AI cellphone guy" className="opacity-50 blur-sm rounded-full border-white shadow-lg hidden 2xl:flex hover:blur-0">
-
-</Image>
+    <main className="lg:flex  items-center p-5 lg:justify-center landingpage ">
+      <div className="pt-10 items-center relative gap-32 flex justify-center">
+        <Image
+          src={ai_cellphone}
+          height={250}
+          width={400}
+          alt="AI cellphone guy"
+          className="opacity-50 blur-sm rounded-full border-white shadow-lg hidden 2xl:flex hover:blur-0"
+        ></Image>
         <div className="max-w-xl ">
           <h1
             className="text-5xl font-bold bg-gradient-to-r from-white to-blue-800 "
@@ -41,9 +45,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-     
-        
-      
     </main>
   );
 }
