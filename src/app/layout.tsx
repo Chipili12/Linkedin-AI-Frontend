@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} landingpage `}>
+      <body className={`${poppins.className} min-h-screen`}>
         <Navbar />
         {children}
       </body>

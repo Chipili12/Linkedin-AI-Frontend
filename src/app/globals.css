@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.landingpage {
+body {
     background: rgb(37, 150, 190);
     background: linear-gradient(
       150deg,
@@ -17,3 +17,4 @@
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track-piece { background-color: #000;}
 ::-webkit-scrollbar-thumb { height: 2px; background-color: #666; border-radius: 3px;}
+
