@@ -1,4 +1,4 @@
-import "./contact.css";
+import "./styles/contact.css";
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import { Poppins } from "next/font/google";
@@ -30,12 +30,12 @@ export default function Contact() {
       </div>
 
       <div className="grid grid-cols-12 flex-col lg:mt-20 mt-10">
-        <div className="xl:mt-20 col-span-12 lg:col-span-5 lg:text-right text-center lg:me-28 text-slate-400">
+        <div className="lg:mt-20 col-span-12 lg:col-span-5 lg:text-right text-center lg:me-28 text-slate-400">
           <div className="lg:flex lg:justify-end lg:pb-10 pb-5">
             <div className="lg:border-r pr-2">
               <a href="tel:+59899150213">
                 <h3 className="text-slate-200 font-semibold">CELULAR</h3>
-                <p>+598 99-150-213</p>
+                <p>+598 99 150 213</p>
               </a>
             </div>
             <Image
@@ -76,7 +76,7 @@ export default function Contact() {
           ></input>
           <input type="hidden" name="subject" value=""></input>
           {/* <input type="hidden" name="redirect" value="landingpage"></input> */}
-          <div className="grid grid-cols-3 2xl:mr-96 m-5 2xl:gap-x-16 gap-x-6 md:mr-40 ">
+          <div className="grid grid-cols-3 xl:mr-60 2xl:mr-96 lg:mr-40 m-5 2xl:gap-x-16 gap-x-6 ">
             <input
               type="text"
               name="name"
@@ -121,7 +121,7 @@ export default function Contact() {
               required
             ></textarea>
             <div className="col-span-3">
-              <button type="submit" className="xl:text-left mt-10 ">
+              <button type="submit" className="xl:text-left mt-10 px-10 py-1 border border-slate-400 hover:border-slate-600 active:border-slate-400">
                 ENVIAR
               </button>
             </div>
