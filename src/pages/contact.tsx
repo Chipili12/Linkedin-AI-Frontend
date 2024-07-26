@@ -1,14 +1,8 @@
-import "./styles/contact.css";
+import "@/app/globals.css";
 import Head from "next/head";
-import Navbar from "../components/navbar";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import { phone, mail } from "@/../public/assets/index";
-
-const poppins = Poppins({
-  weight: ["200", "300", "400"],
-  subsets: ["latin"],
-});
 
 export default function Contact() {
   return (
@@ -17,19 +11,18 @@ export default function Contact() {
         <title>Contacto</title>
         <meta name="description" content="Contact us page" />
       </Head>
-      <Navbar></Navbar>
 
-      <div className="flex flex-col font-thin items-center mt-10 lg:mt-20 w-full px-20 text-center">
-        <div className="flex text-3xl  px-20">
+      <div className="flex flex-col font-thin items-center mt-10 lg:mt-20">
+        <div className="flex text-3xl">
           <h1 className="text-red-300 pr-4">CONTACT</h1>{" "}
           <h1 className="text-white">US</h1>
         </div>
-        <p className="text-slate-300 mt-1 block border-b border-slate-500 pb-2 text-sm lg:text-base">
+        <p className="px-40 text-slate-300 mt-1 block border-b border-slate-500 pb-2 text-sm lg:text-base">
           Si tiene alguna duda, no dude en contactarnos
         </p>
       </div>
 
-      <div className="grid grid-cols-12 flex-col lg:mt-20 mt-10">
+      <div className="grid grid-cols-12 lg:mt-20 mt-10">
         <div className="lg:mt-20 col-span-12 lg:col-span-5 lg:text-right text-center lg:me-28 text-slate-400">
           <div className="lg:flex lg:justify-end lg:pb-10 pb-5">
             <div className="lg:border-r pr-2">
@@ -76,13 +69,13 @@ export default function Contact() {
           ></input>
           <input type="hidden" name="subject" value=""></input>
           {/* <input type="hidden" name="redirect" value="landingpage"></input> */}
-          <div className="grid grid-cols-3 xl:mr-60 2xl:mr-96 lg:mr-40 m-5 2xl:gap-x-16 gap-x-6 ">
+          <div className="grid grid-cols-3 xl:mr-60 2xl:mr-96 lg:mr-40 m-5 2xl:gap-x-10 gap-x-6">
             <input
               type="text"
               name="name"
               id="name"
               placeholder="Nombre"
-              className=" bg-transparent col-span-3 mx-10 sm:col-span-1 lg:mx-0 border-b border-slate-400 pb-2 mt-10 md:mt-0 ps-1"
+              className=" bg-transparent col-span-3 mx-10 lg:mx-0 sm:col-span-1 border-b border-slate-400 pb-2 mt-10 md:mt-0 ps-1"
               required
             />
             <input
@@ -90,7 +83,7 @@ export default function Contact() {
               type="text"
               id="mail"
               placeholder="email"
-              className="bg-transparent col-span-3  mx-10 lg:mx-0 sm:col-span-1 border-b border-slate-400 pb-2 ps-1 mt-10 md:mt-0"
+              className="bg-transparent col-span-3 mx-10 lg:mx-0 sm:col-span-1 border-b border-slate-400 pb-2 mt-10 md:mt-0 ps-1"
               required
             />
             <input
@@ -98,7 +91,7 @@ export default function Contact() {
               type="text"
               id="phone"
               placeholder="Teléfono"
-              className="bg-transparent col-span-3 mx-10 lg:mx-0 sm:col-span-1  border-b border-slate-400 pb-2 mt-10 md:mt-0 ps-1"
+              className="bg-transparent col-span-3 mx-10 lg:mx-0 sm:col-span-1 border-b border-slate-400 pb-2 mt-10 md:mt-0 ps-1"
             />
             <input
               name="subject"
