@@ -11,9 +11,7 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: {
-    default: 'LinkedAI',
-  },
+  title: 'LinkedAI',
   description: "New Generation AI powered LinkedIn reviews and tips",
   icons: {
     icon: [
