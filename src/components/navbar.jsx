@@ -1,8 +1,8 @@
-"use client";
+"use client"; 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { logo, menu_icon } from "@/../public/assets/index";
+import { logo, menu_icon } from "/public/assets/index";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -33,13 +33,16 @@ export default function Navbar() {
   ];
 
   const LinkItem = ({ href, label }) => (
-    <Link className={`${pathname === href ? "text-red-300" : "text-gray-200"} `} href={href}>
+    <Link
+      className={`${pathname === href ? "text-red-300" : "text-gray-200"} `}
+      href={href}
+    >
       {label}
     </Link>
   );
 
   return (
-    <header className="border-b border-slate-500 pb-3 pt-6 flex items-center px-3 justify-between top-0 z-10 right-0 left-0 text-lg">
+    <header className="border-b border-slate-500 pb-4 pt-5 flex items-center px-3 justify-between top-0 z-10 right-0 left-0 text-lg">
       <Link href="/" className="">
         <Image src={logo} alt="logo" className="ms-10" width={200}></Image>
       </Link>

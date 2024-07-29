@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
 import { phone, mail } from "@/../public/assets/index";
+import Navbar from "../components/navbar";
 
 export default function Contact() {
   return (
@@ -11,7 +12,7 @@ export default function Contact() {
         <title>Contacto</title>
         <meta name="description" content="Contact us page" />
       </Head>
-
+      <Navbar></Navbar>
       <div className="flex flex-col font-thin items-center mt-10 lg:mt-20">
         <div className="flex text-3xl">
           <h1 className="text-red-300 pr-4">CONTACT</h1>{" "}
@@ -114,7 +115,10 @@ export default function Contact() {
               required
             ></textarea>
             <div className="col-span-3">
-              <button type="submit" className="xl:text-left mt-10 px-10 py-1 border border-slate-400 hover:border-slate-600 active:border-slate-400">
+              <button
+                type="submit"
+                className="xl:text-left mt-10 px-10 py-1 border border-slate-400 hover:border-slate-600 active:border-slate-400"
+              >
                 ENVIAR
               </button>
             </div>

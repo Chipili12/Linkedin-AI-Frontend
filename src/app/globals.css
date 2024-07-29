@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.features-body{
+  background-color: #000;
+}
+
 @keyframes hero-gradient-animation {
   0% {
       --x-0: 59%;
@@ -209,8 +213,10 @@
   inherits: false;
   initial-value: 59%
 }
-
-body {
+.big{
+  height: 200%;
+}
+.animated-bg {
   --x-0: 59%;
   --y-0: 16%;
   --c-0: hsla(289, 100%, 52%, 1);

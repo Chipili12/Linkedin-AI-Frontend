@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
-import Navbar from "../components/navbar";
+import Totop from "../components/to_top";
 
 const poppins = Poppins({
   weight: ["200", "400", "700"],
@@ -14,8 +14,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>LinkedAI</title>
       </Head>
-      <main className={poppins.className}>
-        <Navbar></Navbar>
+      <main className={`animated-bg ${poppins.className}`}>
+      <Totop/>
         <Component {...pageProps} />
       </main>
     </>
