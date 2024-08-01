@@ -18,7 +18,7 @@ export default function Contact() {
           <h1 className="text-red-300 pr-4">CONTACT</h1>{" "}
           <h1 className="text-white">US</h1>
         </div>
-        <p className="px-40 text-slate-300 mt-1 block border-b border-slate-500 pb-2 text-sm lg:text-base">
+        <p className="px-4 lg:px-40 text-slate-300 mt-1 block border-b border-slate-500 pb-2 text-sm lg:text-base">
           Si tiene alguna duda, no dude en contactarnos
         </p>
       </div>

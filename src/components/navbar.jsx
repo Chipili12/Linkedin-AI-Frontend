@@ -73,7 +73,7 @@ export default function Navbar() {
             >
               <MenuItem href="/">INICIO</MenuItem>
               <MenuItem href="/features">CARACTERÍSTICAS</MenuItem>
-              <MenuItem href="/about">PRESENTACIÓN</MenuItem>
+              <MenuItem href="/presentation">PRESENTACIÓN</MenuItem>
               <MenuItem href="/contact">CONTACTO</MenuItem>
             </ul>
           )}

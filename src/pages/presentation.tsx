@@ -10,7 +10,7 @@ export default function Presentacion() {
         <meta name="description" content="About us page" />
       </Head>
       <Navbar></Navbar>
-      <div className="flex justify-center lg:mt-10">
+      <div className="flex justify-center lg:mt-10 mt-40">
         <div
           style={{
             position: "relative",

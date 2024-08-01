@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="lg:flex items-center p-5 lg:justify-center">
+    <main className="flex p-5 justify-center 2xl:mt-0 mt-20 ">
       <div className="lg:pt-10 items-center relative gap-32 flex justify-center">
         <Image
           src={ai_cellphone}
