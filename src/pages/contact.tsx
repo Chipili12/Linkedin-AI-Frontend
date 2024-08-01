@@ -7,13 +7,13 @@ import Navbar from "../components/navbar";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-contact">
+    <main className="min-h-screen bg-zinc-900">
       <Head>
         <title>Contacto</title>
         <meta name="description" content="Contact us page" />
       </Head>
       <Navbar></Navbar>
-      <div className="flex flex-col font-thin items-center mt-10 lg:mt-20">
+      <div className="flex flex-col font-thin items-center mt-10 lg:mt-20 ">
         <div className="flex text-3xl">
           <h1 className="text-red-300 pr-4">CONTACT</h1>{" "}
           <h1 className="text-white">US</h1>
@@ -23,7 +23,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="grid grid-cols-12 lg:mt-20 mt-10">
+      <div className="grid grid-cols-12 lg:mt-20 mt-10 ">
         <div className="lg:mt-20 col-span-12 lg:col-span-5 lg:text-right text-center lg:me-28 text-slate-400">
           <div className="lg:flex lg:justify-end lg:pb-10 pb-5">
             <div className="lg:border-r pr-2">
@@ -80,10 +80,10 @@ export default function Contact() {
               required
             />
             <input
-              name="email"
+              name="Email"
               type="text"
               id="mail"
-              placeholder="email"
+              placeholder="Correo"
               className="bg-transparent col-span-3 mx-10 lg:mx-0 sm:col-span-1 border-b border-slate-400 pb-2 mt-10 md:mt-0 ps-1"
               required
             />

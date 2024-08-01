@@ -8,6 +8,7 @@ import mail from "./mail.png";
 import arrow from "./arrow.png";
 import architecture from "./architecture.png";
 import ai_hero from "./ai_hero.gif";
+
 // Do all lowercase.
 export {
   dark_favicon,
@@ -20,5 +21,6 @@ export {
   arrow,
   architecture,
   ai_hero,
+  
 
 };

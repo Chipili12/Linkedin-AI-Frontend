@@ -15,8 +15,9 @@ function MyApp({ Component, pageProps }) {
         <title>LinkedAI</title>
       </Head>
       <main className={`animated-bg ${poppins.className}`}>
-      <Totop/>
+      
         <Component {...pageProps} />
+        <Totop/>
       </main>
     </>
   );

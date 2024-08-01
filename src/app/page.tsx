@@ -37,12 +37,6 @@ export default function Home() {
             > 
               Más información.
             </Link>
-            <Link
-              href="/app"
-              className="content-center p-5 rounded-full mt-10 bg-gradient-to-r hover:from-pink-300 hover:to-blue-400 active:bg-blue-400 active:from-pink-100 active:to-blue-500"
-            >
-              Comienza tu prueba grátis
-            </Link>
           </div>
         </div>
       </div>

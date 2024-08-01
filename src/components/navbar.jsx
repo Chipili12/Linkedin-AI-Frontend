@@ -28,7 +28,7 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "INICIO" },
     { href: "/features", label: "CARACTERÍSTICAS" },
-    { href: "/about", label: "NOSOTROS" },
+    { href: "/presentation", label: "PRESENTACIÓN" },
     { href: "/contact", label: "CONTACTO" },
   ];
 
@@ -73,7 +73,7 @@ export default function Navbar() {
             >
               <MenuItem href="/">INICIO</MenuItem>
               <MenuItem href="/features">CARACTERÍSTICAS</MenuItem>
-              <MenuItem href="/about">NOSOTROS</MenuItem>
+              <MenuItem href="/about">PRESENTACIÓN</MenuItem>
               <MenuItem href="/contact">CONTACTO</MenuItem>
             </ul>
           )}
