@@ -24,12 +24,7 @@ export default function Features() {
           artifical, en forma de redes neuronales para otorgar poderoso feeback
           personalizado, para mejorar tus oportunidades laborales.
         </h2>
-        <Link
-          href="/app"
-          className="mx-auto bg-slate-700 content-center p-2 px-4 rounded-full mt-10 bg-gradient-to-r hover:from-pink-300 hover:to-blue-400 active:bg-blue-400 active:from-pink-100 active:to-blue-500"
-        >
-          Comienza tu prueba grátis
-        </Link>
+        
         <Image
           src={ai_hero}
           alt="architecture"
